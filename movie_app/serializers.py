@@ -1,7 +1,13 @@
+from django.contrib.auth.models import User
 from rest_framework import serializers
 from rest_framework.exceptions import ValidationError
-
 from movie_app.models import Movie, Director, Review
+
+
+class UserSimpleSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = 'id username first_name last_name email'.split()
 
 
 class MovieSerializers(serializers.ModelSerializer):

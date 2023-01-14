@@ -124,7 +124,6 @@ def reviews_detail_view(request, **kwargs):
         return Response(data={'message': 'Data received!'})
 
 
-
 @api_view(["GET"])
 def review_movies_view(request):
     if request.method == "GET":

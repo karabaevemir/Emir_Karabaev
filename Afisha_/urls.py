@@ -22,4 +22,5 @@ from movie_app.views import directors_view, directors_detail_view, movies_view, 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('movie_app.urls')),
+    path('api/v1/users/', include('users.urls'))
 ]
